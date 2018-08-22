@@ -57,6 +57,10 @@ jobs:
     <<: *resource_job_defaults
     resource_class: 2xlarge
 
+  2xlarge+: # 20 vCPUs, 40GB RAM ????????
+    <<: *resource_job_defaults
+    resource_class: 2xlarge+
+
   # vm jobs
   machine:
     machine: true
@@ -198,6 +202,8 @@ workflows:
       - medium+
       - large
       - xlarge
+      - 2xlarge
+      - 2xlarge+
 
   vm_jobs:
     jobs:
