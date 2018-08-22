@@ -53,6 +53,10 @@ jobs:
     <<: *resource_job_defaults
     resource_class: xlarge
 
+  2xlarge: # 16 vCPUs, 32GB RAM ????????
+    <<: *resource_job_defaults
+    resource_class: 2xlarge
+
   # vm jobs
   machine:
     machine: true
